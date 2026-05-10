@@ -15,3 +15,11 @@ air = "1.62.0"
 "go:storj.io/drpc/cmd/protoc-gen-go-drpc" = "v0.0.34"
 "go:github.com/swaggo/swag/cmd/swag" = "latest"
 "github:tursodatabase/turso" = "0.5.3"
+
+[tasks.lint]
+description = "Run all linters"
+depends = ["lint-go"]
+
+[tasks."lint-go"]
+description = "Run Go linter"
+run = "golangci-lint run -c .golangci.yml"
