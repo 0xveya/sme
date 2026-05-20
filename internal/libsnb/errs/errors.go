@@ -13,4 +13,5 @@ var (
 	ErrFailedToFindPeer = errors.New("failed to find peer interface")
 	ErrFailedToSetMTU   = errors.New("failed to set MTU")
 	ErrMTUOverflow      = errors.New("MTU overflow")
+	ErrSockOverflow     = errors.New("socket descriptor overflows uintptr capacity")
 )
